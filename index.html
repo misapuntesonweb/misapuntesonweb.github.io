@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="./src/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MisApuntesOnWeb</title>
   </head>
   <body>
-    hello bitch15
+    <div class="header" id="header">
+      <h1>MisApuntesOnWeb</h1>
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">Apuntes</a></li>
+        <li><a href="">Contacto</a></li>
+        <li><a href="">Sobre Mi</a></li>
+      </ul>
+    </div>
+
+    <!-- hero -->
+
+    <div class="hero" id="hero">
+      <h1 class="heroTitle" id="heroTitle">Bienvenidos a Mis Apuntes!</h1>
+
+      <img
+        class="heroImg"
+        id="heroImg"
+        src="./src/img/newheroimage.png"
+        alt=""
+      />
+    </div>
+    <!-- apuntes -->
+
+    <div class="apuntesContainer">
+      <h1 class="seccionApuntes">Apuntes</h1>
+
+      <div class="apuntes" id="apuntes">
+        <div class="apunte1" id="apunte1">
+          <div class="tachuela"></div>
+          <h1>Titulo del apunte</h1>
+          <p>Descripcion breve sobre el apunte y su contenido</p>
+        </div>
+        <div class="apunte1" id="apunte2">
+          <div class="tachuela"></div>
+          <h1>Titulo del apunte</h1>
+          <p>Descripcion breve sobre el apunte y su contenido</p>
+        </div>
+        <div class="apunte1" id="apunte3">
+          <div class="tachuela"></div>
+          <h1>Titulo del apunte</h1>
+          <p>Descripcion breve sobre el apunte y su contenido</p>
+        </div>
+        <div class="apunte1" id="apunte4">
+          <div class="tachuela"></div>
+          <h1>Titulo del apunte</h1>
+          <p>Descripcion breve sobre el apunte y su contenido</p>
+        </div>
+      </div>
+    </div>
+    <!-- footer y contacto -->
+    <div class="footer" id="footer">
+      <div class="contacto" id="contacto">
+        <h1>Necesitas algun apunte o explicacion?</h1>
+        <form action="" method="POST">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Escriba aqui su nombre"
+          /><br />
+          <label for="email">Correo electronico</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="ejemplo@ejemplo.com"
+          /><br />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="redes" id="redes">
+        <h1>Sigamos en contacto!</h1>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./src/main.js"></script>
   </body>
 </html>
