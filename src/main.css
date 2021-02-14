@@ -43,13 +43,16 @@
   padding: 10px;
   list-style: none;
   text-align: center;
+  cursor: pointer;
 }
 
 .header a {
   color: aliceblue;
   text-decoration: none;
 }
-
+.header a:hover {
+  cursor: pointer;
+}
 /* hero */
 
 .hero {
@@ -80,6 +83,81 @@
 
 /* apuntes */
 
+/* Wobble Bottom */
+@-webkit-keyframes hvr-wobble-bottom {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+@keyframes hvr-wobble-bottom {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+.hvr-wobble-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+.hvr-wobble-bottom:hover,
+.hvr-wobble-bottom:focus,
+.hvr-wobble-bottom:active {
+  -webkit-animation-name: hvr-wobble-bottom;
+  animation-name: hvr-wobble-bottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
 .apuntesContainer {
   margin-left: 5vw;
   width: 90%;
@@ -109,6 +187,7 @@
   padding: 25px;
   margin-bottom: 30px;
   box-shadow: rgb(2, 0, 36) 2px 2px;
+  cursor: pointer;
 }
 
 .tachuela {
@@ -137,18 +216,146 @@
 /* footer */
 
 .footer {
-  color: white;
-  background: black;
-  margin-top: 25px;
+  background-color: rgb(2, 93, 212);
+
   width: 100%;
-  height: 350px;
+  padding: 25px;
+  margin-top: 25px;
+}
+.footer-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
   display: flex;
+
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .contacto {
-  padding: 25px 15px 0 25px;
+  padding: 20px;
+  width: 25vw;
+  border-top-right-radius: 50px;
+  background-color: rgba(21, 175, 207, 0.3);
+  box-shadow: rosybrown 10px 10px 1px;
+}
+
+.contacto h1 {
+  color: aliceblue;
+  margin-bottom: 5px;
+}
+
+.contacto input {
+  margin-top: 5px;
+  width: 20vw;
+  height: 4vh;
+  border: none;
+  padding-left: 20px;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 3px;
+  background-color: #f6f6f2;
+  box-shadow: inset 0 0.5px 1.5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.contacto input::selection {
+  border: 1px solid red;
+}
+
+.contacto textarea {
+  margin-top: 5px;
+  resize: none;
+
+  padding-left: 5px;
+  outline: none;
+  width: 20vw;
+  height: 12vh;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #f6f6f2;
+  box-shadow: inset 0 0.5px 1.5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.contacto button {
+  width: 20vw;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(62, 216, 183);
   font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.redes {
+  /* padding: 10px; */
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.redes h1 {
+  color: white;
+  margin-bottom: 30px;
+  background-color: rgba(247, 234, 55, 0.788);
+  padding: 15px;
+  box-shadow: rgba(128, 123, 59, 0.788) 15px 15px 1px;
+}
+.iconos {
+  font-size: 4rem;
+  color: white;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+
+.madewith {
+  background-color: black;
+  height: 10vh;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Pulse Grow */
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(5.5);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse-grow:hover,
+.hvr-pulse-grow:focus,
+.hvr-pulse-grow:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.heart {
+  color: red;
+  font-size: 2.5rem;
 }
 
 /* medias */
@@ -201,5 +408,95 @@
 
   .heroImg {
     width: 90%;
+  }
+
+  .footer {
+    background-color: rgb(2, 93, 212);
+    width: 100%;
+    padding: 25px;
+    margin-top: 25px;
+  }
+  .footer-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contacto {
+    padding: 20px;
+    width: 90vw;
+  }
+
+  .contacto h1 {
+    font-size: 1rem;
+    color: aliceblue;
+    margin-bottom: 5px;
+  }
+
+  .contacto input {
+    margin-top: 5px;
+    width: 60vw;
+    height: 4vh;
+    border: none;
+    font-size: 1rem;
+    padding: 3px;
+  }
+
+  .contacto textarea {
+    margin-top: 5px;
+    width: 60vw;
+    height: 12vh;
+    border: none;
+    font-size: 1.2rem;
+  }
+
+  .contacto button {
+    width: 60vw;
+    height: 5vh;
+    border-radius: 5px;
+    background-color: rgb(62, 216, 183);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+  }
+
+  .redes {
+    /* padding: 10px; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .redes h1 {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
+    background-color: rgba(247, 234, 55, 0.788);
+    padding: 10px;
+    box-shadow: rgba(128, 123, 59, 0.788) 15px 15px 1px;
+  }
+  .iconos {
+    font-size: 5rem;
+    color: white;
+    margin: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .madewith {
+    background-color: black;
+    height: 10vh;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
   }
 }
