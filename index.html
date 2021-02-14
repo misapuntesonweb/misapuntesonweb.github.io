@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- iconos de bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./src/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +17,7 @@
       <ul>
         <li><a href="">HOME</a></li>
         <li><a href="">Apuntes</a></li>
-        <li><a href="">Contacto</a></li>
+        <li><a href="#contacto">Contacto</a></li>
         <li><a href="">Sobre Mi</a></li>
       </ul>
     </div>
@@ -32,25 +37,25 @@
     <!-- apuntes -->
 
     <div class="apuntesContainer">
-      <h1 class="seccionApuntes">Apuntes</h1>
+      <!-- <h1 class="seccionApuntes">Apuntes</h1> -->
 
       <div class="apuntes" id="apuntes">
-        <div class="apunte1" id="apunte1">
+        <div class="hvr-wobble-bottom apunte1" id="apunte1">
           <div class="tachuela"></div>
           <h1>Titulo del apunte</h1>
           <p>Descripcion breve sobre el apunte y su contenido</p>
         </div>
-        <div class="apunte1" id="apunte2">
+        <div class="hvr-wobble-bottom apunte1" id="apunte2">
           <div class="tachuela"></div>
           <h1>Titulo del apunte</h1>
           <p>Descripcion breve sobre el apunte y su contenido</p>
         </div>
-        <div class="apunte1" id="apunte3">
+        <div class="hvr-wobble-bottom apunte1" id="apunte3">
           <div class="tachuela"></div>
           <h1>Titulo del apunte</h1>
           <p>Descripcion breve sobre el apunte y su contenido</p>
         </div>
-        <div class="apunte1" id="apunte4">
+        <div class="hvr-wobble-bottom apunte1" id="apunte4">
           <div class="tachuela"></div>
           <h1>Titulo del apunte</h1>
           <p>Descripcion breve sobre el apunte y su contenido</p>
@@ -59,36 +64,51 @@
     </div>
     <!-- footer y contacto -->
     <div class="footer" id="footer">
-      <div class="contacto" id="contacto">
-        <h1>Necesitas algun apunte o explicacion?</h1>
-        <form action="" method="POST">
-          <label for="nombre">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            placeholder="Escriba aqui su nombre"
-          /><br />
-          <label for="email">Correo electronico</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="ejemplo@ejemplo.com"
-          /><br />
-          <textarea
-            name="consulta"
-            id="consulta"
-            cols="30"
-            rows="10"
-            placeholder="Que te gustaria aprender?"
-          ></textarea
-          ><br />
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-      <div class="redes" id="redes">
-        <h1>Sigamos en contacto!</h1>
+      <div class="footer-container">
+        <div class="contacto" id="contacto">
+          <h1>
+            Necesitas algun apunte <br />
+            o explicacion?
+          </h1>
+          <form action="" method="POST">
+            <!-- <label for="nombre" class="formLabel">Nombre</label> -->
+            <input
+              type="text"
+              id="nombre"
+              placeholder="Escriba aqui su nombre"
+            /><br />
+            <!-- <label class="formLabel" for="email">Correo electronico</label> -->
+            <input
+              type="email"
+              id="email"
+              placeholder="ejemplo@ejemplo.com"
+            /><br />
+            <textarea
+              name="consulta"
+              id="consulta"
+              cols="30"
+              rows="10"
+              placeholder="Que te gustaria aprender?"
+            ></textarea
+            ><br />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <div class="redes" id="redes">
+          <h1>Sigamos en contacto!</h1>
+          <div class="iconos">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+          </div>
+        </div>
       </div>
     </div>
+    <section class="madewith">
+      <h3>allrigth reserved 2021</h3>
+      <h3>Una pagina hecha con <span class="hvr-pulse-grow heart">♥</span></h3>
+    </section>
 
     <!-- scripts -->
     <script src="./src/main.js"></script>
