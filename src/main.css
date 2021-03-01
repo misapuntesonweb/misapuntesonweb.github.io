@@ -40,18 +40,21 @@
 }
 
 .header li {
-  padding: 10px;
   list-style: none;
   text-align: center;
   cursor: pointer;
 }
 
 .header a {
+  padding: 5px 5px;
+  margin: 10px 10px;
   color: aliceblue;
   text-decoration: none;
+  font-weight: bold;
 }
 .header a:hover {
   cursor: pointer;
+  color: orange;
 }
 /* hero */
 
@@ -78,7 +81,7 @@
 }
 
 .heroImg {
-  width: 70%;
+  width: 70vw;
 }
 
 /* apuntes */
@@ -213,6 +216,11 @@
   background-color: orange;
 }
 
+.espaciado--footer {
+  height: 10vh;
+  width: 100%;
+}
+
 /* footer */
 
 .footer {
@@ -246,7 +254,7 @@
 }
 
 .contacto input {
-  margin-top: 5px;
+  margin: 7px auto;
   width: 20vw;
   height: 4vh;
   border: none;
@@ -263,7 +271,7 @@
 }
 
 .contacto textarea {
-  margin-top: 5px;
+  margin-top: 7px;
   resize: none;
 
   padding-left: 5px;
@@ -285,7 +293,7 @@
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  margin-bottom: 25px;
+  margin: 10px 25px 0 0;
   cursor: pointer;
 }
 
